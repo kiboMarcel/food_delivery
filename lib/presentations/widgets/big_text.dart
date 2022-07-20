@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/utils/dimensions.dart';
 
 class BigText extends StatelessWidget {
   final Color? color;
@@ -11,7 +12,7 @@ class BigText extends StatelessWidget {
       this.color,
       required this.text,
       this.overFlow = TextOverflow.ellipsis,
-      this.size = 20})
+      this.size = 0})
       : super(key: key);
 
   @override
@@ -23,7 +24,7 @@ class BigText extends StatelessWidget {
           fontFamily: 'Poppin',
           color: color,
           fontWeight: FontWeight.w400,
-          fontSize: size),
+          fontSize: size == 0 ? Dimensions.font20 : size),
     );
   }
 }
