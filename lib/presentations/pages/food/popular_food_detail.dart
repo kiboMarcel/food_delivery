@@ -5,6 +5,7 @@ import '../../../utils/colors.dart';
 import '../../widgets/app_column_widget.dart';
 import '../../widgets/app_icon_widget.dart';
 import '../../widgets/big_text.dart';
+import '../../widgets/expendable_text_widget.dart';
 import '../../widgets/icon_and_text_widget.dart';
 
 class PopularFoodDetail extends StatelessWidget {
@@ -16,6 +17,7 @@ class PopularFoodDetail extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          //Background Image
           Positioned(
             left: 0,
             right: 0,
@@ -29,6 +31,7 @@ class PopularFoodDetail extends StatelessWidget {
               )),
             ),
           ),
+          //Icon widget
           Positioned(
             top: Dimensions.height45,
             left: Dimensions.widtht20,
@@ -45,6 +48,7 @@ class PopularFoodDetail extends StatelessWidget {
               ],
             ),
           ),
+          //Introduction of Food
           Positioned(
             left: 0,
             right: 0,
@@ -69,7 +73,18 @@ class PopularFoodDetail extends StatelessWidget {
                   SizedBox(
                     height: Dimensions.height20,
                   ),
-                  BigText(text: "Introduce")
+                  BigText(text: "Introduce"),
+                  //Expendable widget
+                  SizedBox(
+                    height: Dimensions.height20,
+                  ),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: ExpendableTextWidget(
+                          text:
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum .'),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -77,7 +92,7 @@ class PopularFoodDetail extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: Container(
-        height: 120,
+        height: Dimensions.bottomHeighBar,
         padding: EdgeInsets.only(
             top: Dimensions.height30,
             bottom: Dimensions.height30,
