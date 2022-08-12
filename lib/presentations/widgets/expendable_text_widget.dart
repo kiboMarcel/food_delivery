@@ -37,12 +37,12 @@ class _ExpendableTextWidget extends State<ExpendableTextWidget> {
         child: secondHalf.isEmpty
             ? Text(
                 firstHalf,
-                style: TextStyle(fontSize: Dimensions.font16, height: 1.7),
+                style: TextStyle(fontSize: 40, height: 1.7),
               )
             : Column(children: [
                 Text(
                   hiddenText ? ("$firstHalf...") : (firstHalf + secondHalf),
-                  style: TextStyle(fontSize: Dimensions.font16, height: 1.7),
+                  style: TextStyle(fontSize: 40, height: 1.7),
                 ),
                 InkWell(
                   onTap: () {
